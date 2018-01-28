@@ -12,6 +12,11 @@ Run drupal container (put your local drupal root folder: ~/projects/docker_drupa
 --------------------------
 docker run --name drupal8 -p 8080:80 -p 8028:22 --link drupal-mysql:mysql -v ~/projects/docker_drupal/drupal/drupal-8.4.4:/var/www/html -d drupal
 
+Get permission to drupal files
+------------------------------
+chmod 777 -R files/
+chmod 777 settings.php
+
 Daily work - stop containers
 ----------------------------
 docker stop drupal-mysql && docker stop drupal8
